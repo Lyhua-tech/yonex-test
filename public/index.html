@@ -6,7 +6,6 @@
     <title>Document</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="./image/">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body class="">
     <!-- Start Navbar -->
@@ -28,7 +27,7 @@
                 <li class="relative"><a href="#" id="hoverLink2">ABOUT</a></li>
             </ul>
             <div class="inline-block cursor-pointer md:hidden mr-3">
-                <img src="/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
+                <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
             </div>
             <div class="w-[130px] fill-slate-100  items-center justify-between md:flex hidden mr-4">
                 <img src="../assets/icons/earth.svg" alt="" class="size-[20px] cursor-pointer ">
@@ -122,20 +121,20 @@
     <!-- End Navbar -->
 
     <!-- Start Hero Content -->
-    <div class="slideshow-container relative max-w-full">
+    <div class="relative">
 
         <div class="mySlides fade relative">
-          <img src="https://www.yonex.com/media/scandiweb/slider/9/_/9_pc-2880x1120-768w.png" class="w-full relative" alt="Nature">
+          <img src="https://www.yonex.com/media/scandiweb/slider/9/_/9_pc-2880x1120-768w.png" class="w-full relative" alt="">
           <button class=" bg-black absolute top-[50%] left-[50%] text-white py-2 px-6">LEARN MORE</button>
         </div>
         
         <div class="mySlides fade relative">
-          <img src="https://www.yonex.com/media/scandiweb/slider/b/w/bwis_manifest_1002.jpg" class="w-full relative" alt="Snow">
+          <img src="https://www.yonex.com/media/scandiweb/slider/b/w/bwis_manifest_1002.jpg" class="w-full relative" alt="">
           <button class=" bg-black absolute top-[50%] left-[40%] text-white py-2 px-6">READ MORE</button>
         </div>
         
-        <div class="mySlides fade">
-          <img src="https://www.yonex.com/media/scandiweb/slider/y/n/ynx_eclp_banner_01_en_2880-1120.jpg" class="w-full" alt="Mountains">
+        <div class="mySlides fade relative">
+          <img src="https://www.yonex.com/media/scandiweb/slider/y/n/ynx_eclp_banner_01_en_2880-1120.jpg" class="w-full" alt="">
           <button class=" bg-black absolute top-[50%] left-[40%] text-white py-2 px-6">LEARN READ</button>
         </div>
         
@@ -172,7 +171,7 @@
     </div>
     <div class="max-w-[1200px] mx-auto flex flex-col justify-center items-center gap-10">
         <h2 class="font-normal text-xl">RECENT NEWS</h2>
-        <div class="flex">
+        <div class="flex mx-auto">
             <div class="size-[400px] ml-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"">
                 <img src="https://www.yonex.com/media/rotator/tmp/images/news240411_600x600.jpg" alt="">
             </div>
@@ -191,8 +190,8 @@
 
 
     <!-- Start Badminton section -->
-    <div class="flex justify-between items-center h-[898px] mt-20 flex-1">
-        <div class="ml-[683px] pl-[100px] size-[440px]" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
+    <div class="flex justify-center mt-20 flex-auto items-center h-[900px] max-w-[1600px] mx-auto">
+        <div class="pl-[260px]">
             <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW BADMINTON</a>
             <p class="font-bold text-3xl py-5">NANOFLARE 1000</p>
             <p class="font-normal font-sans text-sm text-[#737a7e] pb-6">Engineered to improve swing speed and <br> 
@@ -202,21 +201,22 @@
             </p>
             <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold">LEARN MORE</button>
         </div>
-        <div class='flex h-[900px] w-[1400px]' data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <img src="https://www.yonex.com/media/wysiwyg/Home/badminton_racquet_img_2x_NF1000-pro.png" alt="" class="absolute z-50 right-1 w-[1380px]">
-            <img src="https://www.yonex.com/media/images/cms/homepage/shapes/badminton_bg_shape.svg" alt="" class="absolute h-[806px] right-1 z-10">
-        </div>
+        <div class="relative flex items-center w-[1100px] right-1 flex-grow">
+            <img src="https://www.yonex.com/media/wysiwyg/Home/badminton_racquet_img_2x_NF1000-pro.png" alt="" class="relative z-20">
+            <img src="https://www.yonex.com/media/images/cms/homepage/shapes/badminton_bg_shape.svg" alt="" class="absolute inset-0 ">
+        </div>   
     </div>
+    
     <!-- End Badminton section -->
 
     <!-- Start Golf section -->
-    <div class="flex justify-between items-center h-[898px] flex-1">
-        <div class='flex h-[500px] mr-[90px] w-[1000px]' data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine">
-            <img src="https://www.yonex.com/media/wysiwyg/Home/EZONE_GT_d_ts_Head_Horizontal.png" alt="" class="absolute z-50 left-[200px] w-[1000px]">
-            <img src="https://www.yonex.com/media/images/cms/homepage/shapes/golf_bg_shape.svg" alt="" class="absolute h-[500px] left-[200px]">
+    <div class="flex justify-center mt-20 flex-1 items-center h-[900px] max-w-[2000px]">
+        <div class="relative flex items-center w-[1200px] right-1" >
+            <img src="https://www.yonex.com/media/wysiwyg/Home/EZONE_GT_d_ts_Head_Horizontal.png" alt="" class="relative z-50  w-[900px]">
+            <img src="https://www.yonex.com/media/images/cms/homepage/shapes/golf_bg_shape.svg" alt="" class="absolute inset-0 w-[500px]">
         </div>
-        <div class="mr-[848px]" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine"">
-            <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white" >NEW BADMINTON</a>
+        <div class="pr-[480px]">
+            <a href="" class="bg-[#1c5dad] py-1 px-5 font-sans text-white">NEW BADMINTON</a>
             <p class="font-bold text-3xl py-5">NANOFLARE 1000</p>
             <p class="font-normal font-sans text-sm text-[#737a7e] pb-6">Engineered to improve swing speed and <br> 
                 maneuverability, the NANOFLARE is the only <br> 
@@ -226,10 +226,10 @@
             <button class="bg-[#1f2427] py-3 px-10 text-white font-sans font-semibold">LEARN MORE</button>
         </div>
     </div>
+    
     <!-- End Golf section -->
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
     <script>
-      AOS.init();
     </script>
     <script src="../assets/js/main.js">
     </script>
