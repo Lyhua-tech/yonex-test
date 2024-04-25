@@ -18,6 +18,28 @@ const arrObj = [
     },
     
 ]
+const hoverObj = [
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+]
 class CardComponent extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
@@ -26,7 +48,7 @@ class CardComponent extends HTMLElement{
                     return `
                         <div class="flex flex-col items-center justify-center">
                             <img src="${card.img}" alt="">
-                            <p class="font-semibold text-[18px]">${card.title}</p>
+                            <p class="font-semibold text-[18px] ">${card.title}</p>
                         </div>
                     `
                 }).join("")}
@@ -34,35 +56,25 @@ class CardComponent extends HTMLElement{
             `
     } 
 }
-
 customElements.define("card-component", CardComponent);
 
-document.addEventListener('DOMContentLoaded', function() {
-    let hoverLink = document.getElementById("hoverLink");
-    let hoverBox = document.getElementById("HoverBox");
-    
-    hoverLink.addEventListener('mouseover', function() {
-        hoverBox.classList.remove('hidden');
-    });
-    
-    hoverLink.addEventListener('mouseout', function() {
-        hoverBox.classList.add('hidden');
-    });
-});
-
-document.addEventListener('DOMContentLoaded', function() {
-    let hoverLink = document.getElementById("hoverLink2");
-    let hoverBox = document.getElementById("HoverBox2");
-    
-    hoverLink.addEventListener('mouseover', function() {
-        hoverBox.classList.remove('hidden');
-    });
-    
-    hoverLink.addEventListener('mouseout', function() {
-        hoverBox.classList.add('hidden');
-    });
-});
-    
+class HoverComponent extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="flex justify-between gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+        ${hoverObj.map((card) => {
+            return `
+                <div class="flex flex-col items-center justify-center">
+                    <img src="${card.img}" alt="">
+                    <p class="font-semibold text-[18px] text-black">${card.title}</p>
+                </div>
+            `
+        }).join("")}
+    </div>
+    `;
+    }
+}
+customElements.define("hover-component", HoverComponent);
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -90,3 +102,11 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";  
   dots[slideIndex-1].className += " active";
 }
+
+function openNav() {
+    document.getElementById("mySidenav").classList.remove('hidden');
+  }
+
+  function closeNav() {
+    document.getElementById("mySidenav").classList.add('hidden');
+  }

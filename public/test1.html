@@ -1,64 +1,80 @@
-<nav class="w-full bg-gray-300 text-white">
-    <div class="flex justify-between max-w-[1600px] mx-auto items-center">
-      <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="size-[100px]">
-  
-      <ul class="font-semibold text-[14px] md:flex gap-3 hidden">
-        <li class="relative">
-            <a href="#" id="hoverLink" class="relative">BADMINTON</a>
-            <div id="HoverBox" class="absolute">
-                <div class="drop-down">
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                </div>
-                <div class="drop-down">
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                    <a href="#"><img src="./images/batminton.jpeg" alt=""></a>
-                </div>
-            </div> 
-        </li>
-        <li><a href="#">GOLF</a></li>
-        <li><a href="#">TENNIS</a></li>
-        <li><a href="">RUNNING</a></li>
-        <li><a href="">SNOWBOARDING</a></li>
-        <li><a href="">NEWS</a></li>
-        <li><a href="">ABOUT</a></li>
-    </ul>    
-      <section class="md:hidden w-[130px] flex items-center justify-between">
-        <img src="./icons/planet-earth.png" alt="" class="size-[20px]">
-        <img src="/icons/search-interface-symbol (1).png" alt="" class="size-[20px]">
-        <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/menu-icons/accessibility_icon.svg" alt="" class="size-[60px]">
-      </section>
-    </div>
-  </nav>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Animated Sidenav Example</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="font-sans">
 
-<ul class="font-semibold text-[14px] md:flex gap-3 hidden">
-    <li class="relative">
-        <a href="#" id="hoverLink" class="relative">BADMINTON</a>
-        <div id="HoverBox" class="absolute">
-            <div class="drop-down">
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
+    <ul class="font-semibold text-[14px] gap-6 md:flex hidden">
+        <li class="relative group">
+            <a href="#" id="hoverLink" class="group-hover:text-blue-500">BADMINTON</a>
+            <!-- Badminton section -->
+            <div id="HoverBox" class="absolute top-full left-5 bg-white hidden z-[1000] group-hover:block hover:w-full md:w-full md:max-w-[2000px]">
+                <div class="w-[2000px] flex">
+                    <!-- Content for BADMINTON -->
+                    <hover-component></hover-component>
+                </div>
             </div>
-            <div class="drop-down">
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
-                <a href="#"><img src="https://www.yonex.com/media/wysiwyg/submenu-icons/BTECFS23_520x320.png" alt=""></a>
+        </li>
+    </ul>
+    <!-- End Badminton section -->
+    
+    <script>
+        // Define your custom element
+        const hoverObj = [
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/racquets_240306.png",
+        title: "RAQUEST"
+        
+    },
+]
+        class HoverComponent extends HTMLElement {
+            connectedCallback() {
+                this.innerHTML = `
+                <div class="flex justify-between gap-3 max-w-[1600px] items-center w-[900px] flex-1">
+                ${hoverObj.map((card) => {
+                    return `
+                        <div class="flex flex-col items-center justify-center">
+                            <img src="${card.img}" alt="">
+                            <p class="font-semibold text-[18px]">${card.title}</p>
+                        </div>
+                    `
+                }).join("")}
             </div>
-        </div> 
-    </li>
-    <li><a href="#">GOLF</a></li>
-    <li><a href="#">TENNIS</a></li>
-    <li><a href="">RUNNING</a></li>
-    <li><a href="">SNOWBOARDING</a></li>
-    <li><a href="">NEWS</a></li>
-    <li><a href="">ABOUT</a></li>
-</ul> 
-<script src="main.js"></script>
-  
+            `;
+            }
+        }
+    
+        // Register your custom element
+        customElements.define('hover-component', HoverComponent);
+    
+        function openNav() {
+            document.getElementById("mySidenav").classList.remove('hidden');
+        }
+    
+        function closeNav() {
+            document.getElementById("mySidenav").classList.add('hidden');
+        }
+    </script>
+    
+
+</body>
+</html>

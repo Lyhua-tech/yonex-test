@@ -9,22 +9,82 @@
 </head>
 <body class="">
     <!-- Start Navbar -->
-    <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute z-[9999]">
+    <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute z-[9999] ">
         <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] ">
-            <div class="block cursor-pointer md:hidden ml-3">
+            <div class="block cursor-pointer md:hidden ml-3 " onclick="openNav()">
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             </div>
             <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="size-[100px] Logo ml-3">
             <ul class="font-semibold text-[14px] gap-6 md:flex hidden">
-                <li class="relative "><a href="#" id="hoverLink">BADMINTON</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">GOLF</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">TENNIS</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">RUNNING</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">SNOWBOARDING</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">NEWS</a></li>
-                <li class="relative"><a href="#" id="hoverLink2">ABOUT</a></li>
+                <li class=" relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">BADMINTON</a>
+                    <!-- Badminton section -->
+                    <div id="HoverBox" class="absolute top-[20px] -left-[525px] hidden bg-white z-[1000] group-hover:block w-[1600px] hover:transition-all">
+                        <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                            <!-- Content for BADMINTON -->
+                            <hover-component></hover-component>
+                        </div>
+                        <div class="max-w-[1600px] mx-auto flex justify-center">
+                            <!-- Content for BADMINTON -->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">GOLF</a>
+                    <!-- Golf section -->
+                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
+                        <div class="max-w-[1600px] mx-auto flex">
+                            <!-- Content for Golf-->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group ">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">TENNIS</a>
+                    <!-- Tennis section -->
+                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
+                        <div class="max-w-[1600px] mx-auto flex">
+                            <!-- Content for tennis -->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">RUNNING</a>
+                    <!-- Running section -->
+                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
+                        <div class="max-w-[1600px] mx-auto flex">
+                            <!-- Content for Running -->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">SURFING</a>
+                    <!-- Surfing section -->
+                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
+                        <div class="max-w-[1600px] mx-auto flex">
+                            <!-- Content for Surfing -->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
+                <li class="relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">NEWS</a>
+                </li>
+                <li class="relative group">
+                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">ABOUT</a>
+                    <!-- About section -->
+                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
+                        <div class="max-w-[1600px] mx-auto flex">
+                            <!-- Content for About-->
+                            <hover-component></hover-component>
+                        </div>
+                    </div>
+                </li>
             </ul>
             <div class="inline-block cursor-pointer md:hidden mr-3">
                 <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
@@ -36,88 +96,16 @@
             </div>
         </div>
     </nav>
-    <!-- Start Hover Dropdown -->
-
-    <!-- Badminton Sections -->
-    <div id="HoverBox" class="absolute top-[100px] bg-white hidden w-full z-[1000] ">
-        <div class="max-w-[1600px] mx-auto">
-            <div class="grid grid-cols-4 gap-2">
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-            </div>
-        </div>
-    </div> 
-
-    <!-- Golf sections -->
-    <div id="HoverBox2" class=" absolute top-[100px] bg-white hidden w-full z-[1000]">
-        <div class="max-w-[1600px] mx-auto">
-            <div class="grid grid-cols-4 gap-2">
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-                <div>
-                    <a href="#"><img src="../assets/icons/image/racquets_240306.png" alt=""></a>
-                    <p class="text-center text-xl">RACQUET</p>
-                </div>
-            </div>
-        </div>
+    
+    <!-- Start SideBar -->
+    <div id="mySidenav" class="hidden bg-white absolute  z-[1000000] w-64 h-screen overflow-y-auto transform transition-transform ease-in-out duration-300">
+        <p onclick="closeNav()" class="text-end pr-5 text-3xl">x</p>
+        <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">About</a>
+        <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">Services</a>
+        <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">Clients</a>
+        <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">Contact</a>
     </div>
-    <!-- End Hover Dropdown -->
+
     <!-- End Navbar -->
 
     <!-- Start Hero Content -->
