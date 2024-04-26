@@ -11,95 +11,114 @@
     <!-- Start Navbar -->
     <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute z-[9999] ">
         <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] ">
+            <!-- Hamburger Icon -->
             <div class="block cursor-pointer md:hidden ml-3 " onclick="openNav()">
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
                 <div class="bg-black w-7 h-1 rounded-md mt-1"></div>
             </div>
+            <!-- Hamburger Icon -->
+
+            <!-- Logo -->
             <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="size-[100px] Logo ml-3">
-            <ul class="font-semibold text-[14px] gap-6 md:flex hidden">
-                <li class=" relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">BADMINTON</a>
+            <!-- Logo -->
+
+            <div class="hidden font-semibold text-[14px] gap-3 md:flex items-center justify-between ">
+                <div class="group h-[60px] py-5 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
                     <!-- Badminton section -->
-                    <div id="HoverBox" class="absolute top-[20px] -left-[525px] hidden bg-white z-[1000] group-hover:block w-[1600px] hover:transition-all">
-                        <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                            <!-- Content for BADMINTON -->
-                            <hover-component></hover-component>
-                        </div>
-                        <div class="max-w-[1600px] mx-auto flex justify-center">
-                            <!-- Content for BADMINTON -->
-                            <hover-component></hover-component>
-                        </div>
-                    </div>
-                </li>
-                <li class="relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">GOLF</a>
+                    <section class="w-full h-[300px] bg-blue-300 p-[40px] fixed top-[-100%] z-[10000] duration-500 left-0" id="baminton">
+                        <!-- <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <badminton-component></badminton-component>
+                            </div>
+                        </div> -->
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">GOLF</a>
                     <!-- Golf section -->
-                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
-                        <div class="max-w-[1600px] mx-auto flex">
-                            <!-- Content for Golf-->
-                            <hover-component></hover-component>
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <golf-component></golf-component>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="relative group ">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">TENNIS</a>
-                    <!-- Tennis section -->
-                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
-                        <div class="max-w-[1600px] mx-auto flex">
-                            <!-- Content for tennis -->
-                            <hover-component></hover-component>
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">TENNIS</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <hover-component></hover-component>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">RUNNING</a>
-                    <!-- Running section -->
-                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
-                        <div class="max-w-[1600px] mx-auto flex">
-                            <!-- Content for Running -->
-                            <hover-component></hover-component>
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">RUNNING</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <hover-component></hover-component>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">SURFING</a>
-                    <!-- Surfing section -->
-                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
-                        <div class="max-w-[1600px] mx-auto flex">
-                            <!-- Content for Surfing -->
-                            <hover-component></hover-component>
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">SNOWBOARDING</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <hover-component></hover-component>
+                            </div>
                         </div>
-                    </div>
-                </li>
-                <li class="relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">NEWS</a>
-                </li>
-                <li class="relative group">
-                    <a href="#" id="hoverLink" class="group-hover:text-blue-500">ABOUT</a>
-                    <!-- About section -->
-                    <div id="HoverBox" class="absolute top-full  bg-white hidden z-[1000] group-hover:block">
-                        <div class="max-w-[1600px] mx-auto flex">
-                            <!-- Content for About-->
-                            <hover-component></hover-component>
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5 flex-1 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">NEWS</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <hover-component></hover-component>
+                            </div>
                         </div>
-                    </div>
-                </li>
-            </ul>
+                    </section>
+                </div>
+                <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                    <a href="#"  class="group-hover:text-blue-500 ">ABOUT</a>
+                    <!-- Badminton section -->
+                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <hover-component></hover-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+                
+            </div>
             <div class="inline-block cursor-pointer md:hidden mr-3">
                 <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
             </div>
-            <div class="w-[130px] fill-slate-100  items-center justify-between md:flex hidden mr-4">
-                <img src="../assets/icons/earth.svg" alt="" class="size-[20px] cursor-pointer ">
-                <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] cursor-pointer">
-                <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/menu-icons/accessibility_icon.svg" alt="" class="size-[50px] cursor-pointer">
+            <div class="w-[120px] fill-slate-100  items-center gap-3 md:flex hidden">
+                <img src="../assets/icons/earth.svg" alt="" class="size-[15px] cursor-pointer ">
+                <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[15px] cursor-pointer">
+                <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/menu-icons/accessibility_icon.svg" alt="" class="size-[40px] cursor-pointer">
             </div>
         </div>
     </nav>
     
     <!-- Start SideBar -->
-    <div id="mySidenav" class="hidden bg-white absolute  z-[1000000] w-64 h-screen overflow-y-auto transform transition-transform ease-in-out duration-300">
-        <p onclick="closeNav()" class="text-end pr-5 text-3xl">x</p>
+    <div id="mySidenav" class="hidden bg-white absolute  z-[1000000] w-64 h-screen overflow-y-auto transform transition-transform ease-in-out duration-300 ">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-0 " onclick="closeNav()">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
+        </svg>          
         <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">About</a>
         <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">Services</a>
         <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">Clients</a>
@@ -163,7 +182,7 @@
             <div class="size-[400px] ml-10" data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine"">
                 <img src="https://www.yonex.com/media/rotator/tmp/images/news240411_600x600.jpg" alt="">
             </div>
-            <div class="pl-[230px]" data-aos="fade-left" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <div class="">
                 <p class="font-[Oswald, sans-sanref]">General  April 10, 2024</p>
                 <h2 class="text-[30px] font-[Oswald, sans-sanref, lato] font-bold">Yonex announces <br>“Environmental<br>Vision 2050”: To <br> carry sport into <br> the future</h2>
                 <p>
@@ -216,7 +235,7 @@
     </div>
     
     <!-- End Golf section -->
-
+    <!-- Footer -->
     <script>
     </script>
     <script src="../assets/js/main.js">

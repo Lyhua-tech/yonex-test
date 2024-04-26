@@ -8,71 +8,170 @@
 </head>
 <body class="font-sans">
 
-    <ul class="font-semibold text-[14px] gap-6 md:flex hidden">
+    <!-- <ul class="font-semibold text-[14px] gap-6 md:flex hidden">
         <li class="relative group">
             <a href="#" id="hoverLink" class="group-hover:text-blue-500">BADMINTON</a>
-            <!-- Badminton section -->
             <div id="HoverBox" class="absolute top-full left-5 bg-white hidden z-[1000] group-hover:block hover:w-full md:w-full md:max-w-[2000px]">
                 <div class="w-[2000px] flex">
-                    <!-- Content for BADMINTON -->
                     <hover-component></hover-component>
                 </div>
             </div>
         </li>
-    </ul>
+    </ul> -->
     <!-- End Badminton section -->
-    
-    <script>
-        // Define your custom element
-        const hoverObj = [
-    {
-        img: "../assets/icons/image/racquets_240306.png",
-        title: "RAQUEST"
-        
-    },
-    {
-        img: "../assets/icons/image/racquets_240306.png",
-        title: "RAQUEST"
-        
-    },
-    {
-        img: "../assets/icons/image/racquets_240306.png",
-        title: "RAQUEST"
-        
-    },
-    {
-        img: "../assets/icons/image/racquets_240306.png",
-        title: "RAQUEST"
-        
-    },
-]
-        class HoverComponent extends HTMLElement {
-            connectedCallback() {
-                this.innerHTML = `
-                <div class="flex justify-between gap-3 max-w-[1600px] items-center w-[900px] flex-1">
-                ${hoverObj.map((card) => {
-                    return `
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="${card.img}" alt="">
-                            <p class="font-semibold text-[18px]">${card.title}</p>
-                        </div>
-                    `
-                }).join("")}
+    <nav>
+        <div class="max-w-[1600px] mx-auto">
+            <div class="flex justify-between items-center">
+                <div class="bg-blue-500">LEFT</div>
+                <div class="bg-pink-500 md:flex md:flex-shrink hidden md:gap-3">
+                    <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] absolute top-[80px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">GOLF</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5 flex-1 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                    <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                        <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                        <!-- Badminton section -->
+                        <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                            <div id="HoverBox" class="max-w-[95%] mx-auto">
+                                <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                    <hover-component></hover-component>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+                <div class="bg-orange-700"">RIGHT</div>
             </div>
-            `;
-            }
-        }
+        </div>
+    </nav>
+
+    <!-- Toggle list -->
+    <details ontoggle="myFunction()">
+        <!-- <summary>Gender</summary>
+        <form action="" >
+          <input type="radio" id="html" name="fav_language" value="HTML" class="border-">
+          <label for="html">HTML</label><br>
+          <input type="radio" id="css" name="fav_language" value="CSS">
+          <label for="css">CSS</label><br>
+          <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+          <label for="javascript">JavaScript</label>
+        </form> -->
+    </details>
+      
+    <script src="../assets/js">
+        // Define your custom element
+        // const hoverObj = [
+//     {
+//         img: "../assets/icons/image/racquets_240306.png",
+//         title: "RAQUEST"
+        
+//     },
+//     {
+//         img: "../assets/icons/image/racquets_240306.png",
+//         title: "RAQUEST"
+        
+//     },
+//     {
+//         img: "../assets/icons/image/racquets_240306.png",
+//         title: "RAQUEST"
+        
+//     },
+//     {
+//         img: "../assets/icons/image/racquets_240306.png",
+//         title: "RAQUEST"
+        
+//     },
+// ]
+//         class HoverComponent extends HTMLElement {
+//             connectedCallback() {
+//                 this.innerHTML = `
+//                 <div class="flex justify-between gap-3 max-w-[1600px] items-center w-[900px] flex-1">
+//                 ${hoverObj.map((card) => {
+//                     return `
+//                         <div class="flex flex-col items-center justify-center">
+//                             <img src="${card.img}" alt="">
+//                             <p class="font-semibold text-[18px]">${card.title}</p>
+//                         </div>
+//                     `
+//                 }).join("")}
+//             </div>
+//             `;
+//             }
+//         }
     
-        // Register your custom element
-        customElements.define('hover-component', HoverComponent);
+//         // Register your custom element
+//         customElements.define('hover-component', HoverComponent);
     
-        function openNav() {
-            document.getElementById("mySidenav").classList.remove('hidden');
-        }
+//         function openNav() {
+//             document.getElementById("mySidenav").classList.remove('hidden');
+//         }
     
-        function closeNav() {
-            document.getElementById("mySidenav").classList.add('hidden');
-        }
+//         function closeNav() {
+//             document.getElementById("mySidenav").classList.add('hidden');
+//         }
+
     </script>
     
 
