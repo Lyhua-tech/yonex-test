@@ -18,7 +18,7 @@ const arrObj = [
     },
     
 ]
-const hoverObj1 = [
+const badmintonObj = [
     {
         img: "../assets/icons/image/racquets_240306.png",
         title: "RAQUEST"
@@ -60,47 +60,27 @@ const hoverObj1 = [
         
     },
 ]
-const hoverObj2 = [
+const golfObj = [
     {
-        img: "../assets/icons/image/racquets_240306.png",
+        img: "../assets/icons/image/thm_club_ezone.webp",
         title: "RAQUEST"
         
     },
     {
-        img: "../assets/icons/image/strings_240306.webp",
-        title: "STRINGS"
+        img: "../assets/icons/image/Mega-Menu-Golf-Shaft_1.webp",
+        title: "SHAFTS"
         
     },
     {
-        img: "../assets/icons/image/shuttlecocks_img.webp",
-        title: "SHUTTLECOCKS"
+        img: "../assets/icons/image/Mega-Golf-Bag.webp",
+        title: "GEAR"
         
     },
     {
-        img: "../assets/icons/image/10566_011_520x320.webp",
+        img: "../assets/icons/image/golf-athletes.webp",
         title: "APPAREL"
         
-    },
-    {
-        img: "../assets/icons/image/shoes_240306.webp",
-        title: "SHOES"
-        
-    },
-    {
-        img: "../assets/icons/image/bag.webp",
-        title: "BAGS"
-        
-    },
-    {
-        img: "../assets/icons/image/accessories_img2.webp",
-        title: "ACCESSORIES"
-        
-    },
-    {
-        img: "../assets/icons/image/athletes_240306.webp",
-        title: "ATHLETES"
-        
-    },
+    }
 ]
 class CardComponent extends HTMLElement{
     connectedCallback() {
@@ -123,17 +103,17 @@ customElements.define("card-component", CardComponent);
 class BadmintonComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
-        ${hoverObj1.map((card) => {
-            return `
-                <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
-                    <img src="${card.img}" alt="">
-                    <p class="font-semibold text-[18px] text-black">${card.title}</p>
-                </div>
-            `
-        }).join("")}
-    </div>
-    `;
+            <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+                ${badmintonObj.map((card) => {
+                    return `
+                        <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
+                            <img src="${card.img}" alt="">
+                            <p class="font-semibold text-[18px] text-black">${card.title}</p>
+                        </div>
+                    `
+                    }).join("")}
+            </div>
+            `;
     }
 }
 customElements.define("badminton-component", BadmintonComponent);
@@ -142,7 +122,7 @@ class GolfComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
         <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
-        ${hoverObj2.map((card) => {
+        ${golfObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
                     <img src="${card.img}" alt="">
@@ -184,19 +164,21 @@ function showSlides(n) {
 }
 
 function openNav() {
-    document.getElementById("mySidenav").classList.add('top-[8%]');
+    document.getElementById("mySidenav").classList.remove('hidden');
   }
 
   function closeNav() {
-    document.getElementById("mySidenav").classList.add('top-[-100%]');
+    document.getElementById("mySidenav").classList.add('hidden');
   }
 
 function hoverDrop(){
-    document.querySelector('#baminton').classList.toggle('top-[8%]')
+    document.querySelector('#baminton').classList.remove('top-[-100%]')
+    document.querySelector('#baminton').classList.add('top-[10%]')
     // document.querySelector('#baminton').classList.remove('hidden')
 }
-function hoverShow(){
-    document.querySelector('#baminton').classList.toggle('top-[-100%]')
+function hoverHide(){
+    document.querySelector('#baminton').classList.remove('top-[10%]')
+    document.querySelector('#baminton').classList.add('top-[-100%]')
     // document.querySelector('#baminton').classList.remove('hidden')
 }
 // const hoverDrop = document.getElementById('hoverLink')

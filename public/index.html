@@ -23,80 +23,25 @@
             <img src="https://www.yonex.com/static/version1712695184/frontend/Yonex/base/en_US/images/Yonex_Logo.svg" alt="" class="size-[100px] Logo ml-3">
             <!-- Logo -->
 
-            <div class="hidden font-semibold text-[14px] gap-3 md:flex items-center justify-between ">
-                <div class="group h-[60px] py-5 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+            <div class="hidden font-semibold text-[14px] gap-10 md:flex items-center justify-between ">
+                <div class="group h-[60px] py-5 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverHide()">
                     <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
                     <!-- Badminton section -->
-                    <section class="w-full h-[300px] bg-blue-300 p-[40px] fixed top-[-100%] z-[10000] duration-500 left-0" id="baminton">
-                        <!-- <div id="HoverBox" class="max-w-[95%] mx-auto">
+                    <section class="w-full  bg-blue-300 p-[40px] fixed top-[-100%] z-[10000] duration-500 left-0" id="baminton">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
                             <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                                 <badminton-component></badminton-component>
                             </div>
-                        </div> -->
+                        </div>
                     </section>
                 </div>
-                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
+                <div class="group h-[60px] py-5  " id="hoverLink" >
                     <a href="#"  class="group-hover:text-blue-500 ">GOLF</a>
                     <!-- Golf section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
+                    <section class="w-full bg-green-500 p-[30px] fixed top-[-1000%] h-[220px] z-[10000] left-0" id="Golf">
                         <div id="HoverBox" class="max-w-[95%] mx-auto">
                             <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                                 <golf-component></golf-component>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
-                    <a href="#"  class="group-hover:text-blue-500 ">TENNIS</a>
-                    <!-- Badminton section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
-                        <div id="HoverBox" class="max-w-[95%] mx-auto">
-                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                                <hover-component></hover-component>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
-                    <a href="#"  class="group-hover:text-blue-500 ">RUNNING</a>
-                    <!-- Badminton section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
-                        <div id="HoverBox" class="max-w-[95%] mx-auto">
-                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                                <hover-component></hover-component>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
-                    <a href="#"  class="group-hover:text-blue-500 ">SNOWBOARDING</a>
-                    <!-- Badminton section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
-                        <div id="HoverBox" class="max-w-[95%] mx-auto">
-                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                                <hover-component></hover-component>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="group h-[60px] py-5 flex-1 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
-                    <a href="#"  class="group-hover:text-blue-500 ">NEWS</a>
-                    <!-- Badminton section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
-                        <div id="HoverBox" class="max-w-[95%] mx-auto">
-                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                                <hover-component></hover-component>
-                            </div>
-                        </div>
-                    </section>
-                </div>
-                <div class="group h-[60px] py-5" id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverShow()">
-                    <a href="#"  class="group-hover:text-blue-500 ">ABOUT</a>
-                    <!-- Badminton section -->
-                    <section class="w-full bg-white p-[40px] fixed top-[70px] hidden z-[10000] left-0" id="baminton">
-                        <div id="HoverBox" class="max-w-[95%] mx-auto">
-                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
-                                <hover-component></hover-component>
                             </div>
                         </div>
                     </section>
@@ -116,7 +61,7 @@
     
     <!-- Start SideBar -->
     <div id="mySidenav" class="hidden bg-white absolute  z-[1000000] w-64 h-screen overflow-y-auto transform transition-transform ease-in-out duration-300 ">
-        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 absolute right-0 " onclick="closeNav()">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 right-0 " onclick="closeNav()">
             <path stroke-linecap="round" stroke-linejoin="round" d="M6 18 18 6M6 6l12 12" />
         </svg>          
         <a href="#" class="py-2 px-4 block text-gray-600 hover:text-white hover:bg-gray-800 transition duration-300">About</a>
@@ -131,17 +76,17 @@
     <div class="relative">
 
         <div class="mySlides fade relative">
-          <img src="https://www.yonex.com/media/scandiweb/slider/9/_/9_pc-2880x1120-768w.png" class="w-full relative" alt="">
+          <img src="../assets/icons/image/Lucas.webp" class="w-full h-auto relative" alt="">
           <button class=" bg-black absolute top-[50%] left-[50%] text-white py-2 px-6">LEARN MORE</button>
         </div>
         
         <div class="mySlides fade relative">
-          <img src="https://www.yonex.com/media/scandiweb/slider/b/w/bwis_manifest_1002.jpg" class="w-full relative" alt="">
+          <img src="https://www.yonex.com/media/scandiweb/slider/b/w/bwis_manifest_1002.jpg" class="w-full h-auto relative object-cover" alt="">
           <button class=" bg-black absolute top-[50%] left-[40%] text-white py-2 px-6">READ MORE</button>
         </div>
         
         <div class="mySlides fade relative">
-          <img src="https://www.yonex.com/media/scandiweb/slider/y/n/ynx_eclp_banner_01_en_2880-1120.jpg" class="w-full" alt="">
+          <img src="https://www.yonex.com/media/scandiweb/slider/y/n/ynx_eclp_banner_01_en_2880-1120.jpg" class="w-full h-auto object-cover" alt="">
           <button class=" bg-black absolute top-[50%] left-[40%] text-white py-2 px-6">LEARN READ</button>
         </div>
         
