@@ -1,3 +1,4 @@
+// Sport card object
 const arrObj = [
     {
         img: "https://www.yonex.com/media/catalog/category/NANOFLARE_800.png",
@@ -18,6 +19,7 @@ const arrObj = [
     },
     
 ]
+// Badminton object
 const badmintonObj = [
     {
         img: "../assets/icons/image/racquets_240306.png",
@@ -60,6 +62,7 @@ const badmintonObj = [
         
     },
 ]
+// golfobj
 const golfObj = [
     {
         img: "../assets/icons/image/thm_club_ezone.webp",
@@ -82,6 +85,91 @@ const golfObj = [
         
     }
 ]
+// tennisobj
+const tennisObj = [
+    {
+        img: "../assets/icons/image/raquet-tennis.webp",
+        title: "RAQUEST"
+        
+    },
+    {
+        img: "../assets/icons/image/strings-tennis.webp",
+        title: "SHAFTS"
+        
+    },
+    {
+        img: "../assets/icons/image/tennis-ball.webp",
+        title: "GEAR"
+        
+    },
+    {
+        img: "../assets/icons/image/apparel-tennis.webp",
+        title: "APPAREL"
+        
+    },
+    {
+        img: "../assets/icons/image/shoes-tennis.webp",
+        title: "SHOES"
+        
+    },
+    {
+        img: "../assets/icons/image/tennis_Bag_.webp",
+        title: "BAGS"
+        
+    },
+    {
+        img: "../assets/icons/image/accessories-tennis.webp",
+        title: "ACCESSORIES"
+        
+    },
+    {
+        img: "../assets/icons/image/tennis-athlete.webp",
+        title: "ATHLETES"
+        
+    },
+]
+// runningobj
+const runningObj = [
+    {
+        img: "../assets/icons/image/shoe-orange.webp",
+        title: "MEN"
+        
+    },
+    {
+        img: "../assets/icons/image/shoe-white.webp",
+        title: "WOMEN"
+        
+    },
+    {
+        img: "../assets/icons/image/shoe-brown.webp",
+        title: "UNISEX"
+        
+    },
+]
+// snowboardobj
+const snowboardObj = [
+    {
+        img: "../assets/icons/image/skate.webp",
+        title: "BOARD"
+        
+    },
+    {
+        img: "../assets/icons/image/skate-shoe.webp",
+        title: "BOOT & BINDING"
+        
+    },
+    {
+        img: "../assets/icons/image/skate-coat.webp",
+        title: "GEAR"
+        
+    },
+    {
+        img: "../assets/icons/image/apparel-tennis.webp",
+        title: "APPAREL"
+        
+    },
+]
+// Sports card component
 class CardComponent extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
@@ -100,6 +188,7 @@ class CardComponent extends HTMLElement{
 }
 customElements.define("card-component", CardComponent);
 
+// Baminton component
 class BadmintonComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -107,7 +196,7 @@ class BadmintonComponent extends HTMLElement {
                 ${badmintonObj.map((card) => {
                     return `
                         <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
-                            <img src="${card.img}" alt="">
+                            <a href=""><img src="${card.img}" alt=""></a>
                             <p class="font-semibold text-[18px] text-black">${card.title}</p>
                         </div>
                     `
@@ -118,6 +207,7 @@ class BadmintonComponent extends HTMLElement {
 }
 customElements.define("badminton-component", BadmintonComponent);
 
+// Golf component
 class GolfComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
@@ -125,7 +215,7 @@ class GolfComponent extends HTMLElement {
         ${golfObj.map((card) => {
             return `
                 <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
-                    <img src="${card.img}" alt="">
+                    <a href=""><img src="${card.img}" alt=""></a>
                     <p class="font-semibold text-[18px] text-black">${card.title}</p>
                 </div>
             `
@@ -135,6 +225,63 @@ class GolfComponent extends HTMLElement {
     }
 }
 customElements.define("golf-component", GolfComponent);
+
+// Tennis component
+class TennisComponent extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="grid grid-cols-4 grid-rows-2 gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+        ${tennisObj.map((card) => {
+            return `
+                <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
+                    <a href=""><img src="${card.img}" alt=""></a>
+                    <p class="font-semibold text-[18px] text-black">${card.title}</p>
+                </div>
+            `
+        }).join("")}
+    </div>
+    `;
+    }
+}
+customElements.define("tennis-component", TennisComponent);
+
+// Running component
+class RunningComponent extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="flex justify-between gap-4 max-w-[1600px] items-center w-[700px] flex-1">
+        ${runningObj.map((card) => {
+            return `
+                <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
+                    <a href=""><img src="${card.img}" alt=""></a>
+                    <p class="font-semibold text-[18px] text-black">${card.title}</p>
+                </div>
+            `
+        }).join("")}
+    </div>
+    `;
+    }
+}
+customElements.define("running-component", RunningComponent);
+
+// Tennis component
+class SnowboardComponent extends HTMLElement {
+    connectedCallback() {
+        this.innerHTML = `
+        <div class="flex justify-between gap-4 max-w-[1600px] items-center w-[900px] flex-1">
+        ${snowboardObj.map((card) => {
+            return `
+                <div class="flex flex-col items-center justify-center bg-[#f7f8f9]">
+                    <a href=""><img src="${card.img}" alt=""></a>
+                    <p class="font-semibold text-[18px] text-black">${card.title}</p>
+                </div>
+            `
+        }).join("")}
+    </div>
+    `;
+    }
+}
+customElements.define("snowboard-component", SnowboardComponent);
 
 let slideIndex = 1;
 showSlides(slideIndex);
@@ -165,23 +312,44 @@ function showSlides(n) {
 
 function openNav() {
     document.getElementById("mySidenav").classList.remove('hidden');
-  }
+}
 
-  function closeNav() {
+function closeNav() {
     document.getElementById("mySidenav").classList.add('hidden');
-  }
+}
 
+// badminton
 function hoverDrop(){
-    document.querySelector('#baminton').classList.remove('top-[-100%]')
-    document.querySelector('#baminton').classList.add('top-[10%]')
-    // document.querySelector('#baminton').classList.remove('hidden')
+    document.querySelector('#baminton').classList.toggle('hidden')
 }
 function hoverHide(){
-    document.querySelector('#baminton').classList.remove('top-[10%]')
-    document.querySelector('#baminton').classList.add('top-[-100%]')
-    // document.querySelector('#baminton').classList.remove('hidden')
+    document.querySelector('#baminton').classList.toggle('hidden')
 }
-// const hoverDrop = document.getElementById('hoverLink')
-// hoverDrop.addEventListener('mouseenter', function(){
-//     document.getElementById('baminton').classList.remove('hid')
-// })
+// GOLF Hover
+function golfDrop(){
+    document.querySelector('#golf').classList.toggle('hidden')
+}
+function golfHide(){
+    document.querySelector('#golf').classList.toggle('hidden')
+}
+// tennis Hover
+function tennisDrop(){
+    document.querySelector('#tennis').classList.toggle('hidden')
+}
+function tennisHide(){
+    document.querySelector('#tennis').classList.toggle('hidden')
+}
+// running Hover
+function runningDrop(){
+    document.querySelector('#running').classList.toggle('hidden')
+}
+function runningHide(){
+    document.querySelector('#running').classList.toggle('hidden')
+}
+// snowboard Hover
+function snowboardDrop(){
+    document.querySelector('#snowboard').classList.toggle('hidden')
+}
+function snowboardHide(){
+    document.querySelector('#snowboard').classList.toggle('hidden')
+}
