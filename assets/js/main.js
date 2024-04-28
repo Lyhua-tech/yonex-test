@@ -353,3 +353,10 @@ function snowboardDrop(){
 function snowboardHide(){
     document.querySelector('#snowboard').classList.toggle('hidden')
 }
+// about Hover
+function aboutDrop(){
+    document.querySelector('#about').classList.toggle('hidden')
+}
+function aboutHide(){
+    document.querySelector('#about').classList.toggle('hidden')
+}
