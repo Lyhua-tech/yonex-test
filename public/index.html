@@ -24,10 +24,11 @@
             <!-- Logo -->
 
             <div class="hidden font-semibold text-[14px] gap-10 md:flex items-center justify-between ">
+                <!-- Badminton Hoverdrop -->
                 <div class="group h-[60px] py-5 " id="hoverLink" onmouseenter="hoverDrop()" onmouseleave="hoverHide()">
-                    <a href="#"  class="group-hover:text-blue-500 ">BADMINTON</a>
+                    <a href="#"  class="group-hover:text-blue-500 relative">BADMINTON</a>
                     <!-- Badminton section -->
-                    <section class="w-full  bg-blue-300 p-[40px] fixed top-[-100%] z-[10000] duration-500 left-0" id="baminton">
+                    <section class="w-full  bg-white p-[40px] absolute top-[100px] hidden z-[10000] left-0" id="baminton">
                         <div id="HoverBox" class="max-w-[95%] mx-auto">
                             <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                                 <badminton-component></badminton-component>
@@ -35,10 +36,12 @@
                         </div>
                     </section>
                 </div>
-                <div class="group h-[60px] py-5  " id="hoverLink" >
-                    <a href="#"  class="group-hover:text-blue-500 ">GOLF</a>
+
+                <!-- Golf Hoverdrop -->
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="golfDrop()" onmouseleave="golfHide()">
+                    <a href="#"  class="group-hover:text-blue-500 relative">GOLF</a>
                     <!-- Golf section -->
-                    <section class="w-full bg-green-500 p-[30px] fixed top-[-1000%] h-[220px] z-[10000] left-0" id="Golf">
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden h-[220px] z-[10000] left-0" id="golf">
                         <div id="HoverBox" class="max-w-[95%] mx-auto">
                             <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
                                 <golf-component></golf-component>
@@ -46,7 +49,51 @@
                         </div>
                     </section>
                 </div>
-                
+
+                <!-- Tennis Hoverdrop -->
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="tennisDrop()" onmouseleave="tennisHide()">
+                    <a href="#"  class="group-hover:text-blue-500 relative">TENNIS</a>
+                    <!-- Tennis section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] hidden z-[10000] left-0" id="tennis">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <tennis-component></tennis-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- running Hoverdrop -->
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="runningDrop()" onmouseleave="runningHide()">
+                    <a href="#"  class="group-hover:text-blue-500 relative">RUNNING</a>
+                    <!-- running section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] h-[220px] hidden z-[10000] left-0" id="running">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex mb-4 justify-center">
+                                <running-component></running-component>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+
+                <!-- snowboard Hoverdrop -->
+                <div class="group h-[60px] py-5  " id="hoverLink" onmouseenter="snowboardDrop()" onmouseleave="snowboardHide()">
+                    <a href="#"  class="group-hover:text-blue-500 relative">SNOWBOARDING</a>
+                    <!-- snowboard section -->
+                    <section class="w-full bg-white p-[30px] absolute top-[100px] justify-center hidden z-[10000] left-0 h-[380px]" id="snowboard">
+                        <div id="HoverBox" class="max-w-[95%] mx-auto">
+                            <div class="max-w-[1600px] mx-auto flex flex-col mb-4 justify-center items-center gap-3">
+                                <snowboard-component></snowboard-component>
+                                <div class="block">
+                                    <div class="flex flex-col items-center justify-center bg-[#f7f8f9] w-[223px]">
+                                        <a href=""><img src="../assets/icons/image/skate-athlete.webp" alt=""></a>
+                                        <p class="font-semibold text-[14px] text-black">TEAM</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
             </div>
             <div class="inline-block cursor-pointer md:hidden mr-3">
                 <img src="../assets/icons/search-interface-symbol (1).png" alt="" class="size-[20px] ">
