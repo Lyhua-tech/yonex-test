@@ -177,7 +177,7 @@ class CardComponent extends HTMLElement{
                 ${arrObj.map((card) => {
                     return `
                         <div class="flex flex-col items-center justify-center">
-                            <img src="${card.img}" alt="" class="" >
+                            <img src="${card.img}" alt="" class="bg-[#f7f8f9]" >
                             <p class="font-semibold text-[18px] ">${card.title}</p>
                         </div>
                     `
@@ -264,7 +264,7 @@ class RunningComponent extends HTMLElement {
 }
 customElements.define("running-component", RunningComponent);
 
-// Tennis component
+// Snowboard component
 class SnowboardComponent extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
