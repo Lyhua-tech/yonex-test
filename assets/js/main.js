@@ -360,3 +360,69 @@ function aboutDrop(){
 function aboutHide(){
     document.querySelector('#about').classList.toggle('hidden')
 }
+
+function showDropdown(x){
+    if (x === 1){
+        let dropdownside = document.getElementById('badminton-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 2){
+        let dropdownside = document.getElementById('golf-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 3){
+        let dropdownside = document.getElementById('tennis-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 4){
+        let dropdownside = document.getElementById('running-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 5){
+        let dropdownside = document.getElementById('snowboard-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === 6){
+        let dropdownside = document.getElementById('about-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+}
+function hideDropDown(x){
+    if (x === -1){
+        let dropdownside = document.getElementById('badminton-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -2){
+        let dropdownside = document.getElementById('golf-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -3){
+        let dropdownside = document.getElementById('tennis-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -4){
+        let dropdownside = document.getElementById('running-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -5){
+        let dropdownside = document.getElementById('snowboard-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+    if (x === -6){
+        let dropdownside = document.getElementById('about-drop');
+        dropdownside.classList.toggle('hidden')
+    }
+}
+
+function hoverShow(){
+    let whiteblock = document.getElementById('white-block')
+    let footersec = document.getElementById('footer-sec')
+    whiteblock.classList.add('hidden')
+    footersec.classList.add('top-[160px]')
+}
+function hoveride(){
+    let whiteblock = document.getElementById('white-block')
+    let footersec = document.getElementById('footer-sec')
+    whiteblock.classList.remove('hidden')
+    footersec.classList.remove('top-[160px]')
+}
