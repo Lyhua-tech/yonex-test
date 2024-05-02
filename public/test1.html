@@ -119,7 +119,7 @@
           <label for="javascript">JavaScript</label>
         </form> -->
     </details>
-    <footer class="bg-[#24292b] h-[970px] md:h-[370px]">
+    <!-- <footer class="bg-[#24292b] h-[970px] md:h-[370px]">
         <div class="max-w-[1300px] mx-auto">
             <div class="md:justify-between md:items-center md:flex md:h-[50%]">
                 <div class="flex items-center justify-center">
@@ -267,8 +267,117 @@
         </li>
         <hr>
     </ul>
+     -->
+    <div class="md:hidden md:relative inline-block">
+
+        <div class="mySlide1 fade1">
+          <img src="../assets/icons/image/responsive-slide/lucas.webp" class="w-full h-auto relative" alt="">
+          <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">WATCH VIDEO</button>
+        </div>
+        
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/badminton-1000.webp" class="w-full h-auto relative object-cover" alt="">
+          <button class=" bg-black absolute top-[50%] left-[40%] text-white py-3 w-[110px]">READ MORE</button>
+        </div>
+        
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/beyond-what-i-see.webp" class="w-full h-auto object-cover" alt="">
+          <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">LEARN MORE</button>
+        </div>
+
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/counter-drive.webp" class="w-full h-auto object-cover" alt="">
+          <button class=" bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">LEARN MORE</button>
+        </div>
+
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/craft.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/cover.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/ezone.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/far-beyond.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/mobile_375_500.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+        <div class="mySlides1 fade1 relative">
+          <img src="../assets/icons/image/responsive-slide/new-eclipson.webp" class="w-full h-auto object-cover" alt="">
+        </div>
+
+        
+        <button href="#" class="prev1 absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides1(-1)">❮</button>
+        <button href="#" class="next1 absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides1(1)">❯</button>
+        
+    </div>
     
+      <div class="md:hidden md:relative block">
+        <div class="mySlides1 fade1">
+            <img src="../assets/icons/image/responsive-slide/lucas.webp" class="w-full h-auto relative" alt="">
+            <button class="bg-black absolute top-[50%] left-[50%] text-white py-3 w-[110px]">WATCH VIDEO</button>
+        </div>
     
+        <!-- Add more slide divs here -->
+    
+        <button href="#" class="prev1 absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides1(-1)">❮</button>
+        <button href="#" class="next1 absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides1(1)">❯</button>
+    </div>
+  
+  <script>
+      let slideIndex1 = 1;
+      showSlides1(slideIndex1);
+  
+      function plusSlides1(n) {
+          showSlides1(slideIndex1 += n);
+      }
+  
+      function currentSlide1(n) {
+          showSlides1(slideIndex1 = n);
+      }
+  
+      function showSlides1(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides1");
+          if (n > slides.length) { slideIndex1 = 1 }
+          if (n < 1) { slideIndex1 = slides.length }
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex1 - 1].style.display = "block";
+      }
+  </script>
+  
+  
+  <script>
+      let slideIndex1 = 1;
+      showSlides1(slideIndex1);
+  
+      function plusSlides1(n) {
+          showSlides1(slideIndex1 += n);
+      }
+  
+      function currentSlide1(n) {
+          showSlides1(slideIndex1 = n);
+      }
+  
+      function showSlides1(n) {
+          let i;
+          let slides = document.getElementsByClassName("mySlides1");
+          if (n > slides.length) { slideIndex1 = 1 }
+          if (n < 1) { slideIndex1 = slides.length }
+          for (i = 0; i < slides.length; i++) {
+              slides[i].style.display = "none";
+          }
+          slides[slideIndex1 - 1].style.display = "block";
+      }
+  </script>
+  
     <script src="../assets/js/main.js">
         // Define your custom element
         // const hoverObj = [
