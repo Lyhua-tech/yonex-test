@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <div class="slideshow-container md:hidden block">
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/lucas.webp" style="width:100%">
+        <div class="text">Caption Text</div>
+        </div>
+        
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/badminton-1000.webp" style="width:100%">
+        <div class="text">Caption Two</div>
+        </div>
+        
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/beyond-what-i-see.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/craft.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/counter-drive.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/craft.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/cover.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/ezone.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/far-beyond.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/mobile_375_500.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+
+        <div class="mySlides1 fade dot">
+        <img src="../assets/icons/image/responsive-slide/new-eclipson.webp" style="width:100%">
+        <div class="text">Caption Three</div>
+        </div>
+    
+    </div>
+    
+    <script>
+        let slideIndex1 = 0;
+        showSlides1();
+
+        function showSlides1() {
+        let i;
+        let slides = document.getElementsByClassName("mySlides1");
+        let dots = document.getElementsByClassName("dot");
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";  
+        }
+        slideIndex1++;
+        if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+        slides[slideIndex1-1].style.display = "block";  
+        dots[slideIndex1-1].className += " active";
+        setTimeout(showSlides1, 2000); // Change image every 2 seconds
+        }
+    </script>
+</body>
+</html>

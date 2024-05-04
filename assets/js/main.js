@@ -173,7 +173,7 @@ const snowboardObj = [
 class CardComponent extends HTMLElement{
     connectedCallback() {
         this.innerHTML = `
-            <div class="flex justify-between gap-3 max-w-[1600px] items-center flex-1">
+            <div class="flex justify-between gap-3 max-w-[1200px] items-center flex-1">
                 ${arrObj.map((card) => {
                     return `
                         <div class="flex flex-col items-center justify-center">
@@ -310,33 +310,6 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 
-let slideIndex1 = 1;
-showSlides1(slideIndex1);
-
-function plusSlides1(n) {
-  showSlides1(slideIndex1 += n);
-}
-
-function currentSlide1(n) {
-  showSlides1(slideIndex1 = n);
-}
-
-function showSlides1(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides1");
-  let dots = document.getElementsByClassName("dot1");
-  if (n > slides.length) {slideIndex1 = 1}    
-  if (n < 1) {slideIndex1 = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";  
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex1 -1].style.display = "block";  
-  dots[slideIndex1 -1].className += " active";
-}
-
 function openNav() {
     document.getElementById("mySidenav").classList.remove('hidden');
 }
@@ -441,15 +414,19 @@ function hideDropDown(x){
     }
 }
 
-function hoverShow(){
-    let whiteblock = document.getElementById('white-block')
-    let footersec = document.getElementById('footer-sec')
-    whiteblock.classList.add('hidden')
-    footersec.classList.add('top-[160px]')
-}
-function hoveride(){
-    let whiteblock = document.getElementById('white-block')
-    let footersec = document.getElementById('footer-sec')
-    whiteblock.classList.remove('hidden')
-    footersec.classList.remove('top-[160px]')
+let slideIndex1 = 0;
+showSlides1();
+
+function showSlides1() {
+    let i;
+    let slides = document.getElementsByClassName("mySlides1");
+    let dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndex1++;
+    if (slideIndex1 > slides.length) {slideIndex1 = 1}    
+    slides[slideIndex1-1].style.display = "block";  
+    dots[slideIndex1-1].className += " active";
+    setTimeout(showSlides1, 2000); // Change image every 2 seconds
 }
