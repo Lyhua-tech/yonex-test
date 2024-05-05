@@ -328,107 +328,43 @@
         <button href="#" class="prev1 absolute top-1/2 left-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light ml-2 text-white pb-1 pr-1" onclick="plusSlides1(-1)">❮</button>
         <button href="#" class="next1 absolute top-1/2 right-1 transform -translate-y-1/2 w-[50px] h-[50px] bg-zinc-700 text-3xl font-light mr-2 text-white pb-1 pl-1" onclick="plusSlides1(1)">❯</button>
     </div>
-  
-  <script>
-      let slideIndex1 = 1;
-      showSlides1(slideIndex1);
-  
-      function plusSlides1(n) {
-          showSlides1(slideIndex1 += n);
-      }
-  
-      function currentSlide1(n) {
-          showSlides1(slideIndex1 = n);
-      }
-  
-      function showSlides1(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides1");
-          if (n > slides.length) { slideIndex1 = 1 }
-          if (n < 1) { slideIndex1 = slides.length }
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          slides[slideIndex1 - 1].style.display = "block";
-      }
-  </script>
-  
-  
-  <script>
-      let slideIndex1 = 1;
-      showSlides1(slideIndex1);
-  
-      function plusSlides1(n) {
-          showSlides1(slideIndex1 += n);
-      }
-  
-      function currentSlide1(n) {
-          showSlides1(slideIndex1 = n);
-      }
-  
-      function showSlides1(n) {
-          let i;
-          let slides = document.getElementsByClassName("mySlides1");
-          if (n > slides.length) { slideIndex1 = 1 }
-          if (n < 1) { slideIndex1 = slides.length }
-          for (i = 0; i < slides.length; i++) {
-              slides[i].style.display = "none";
-          }
-          slides[slideIndex1 - 1].style.display = "block";
-      }
-  </script>
-  
-    <script src="../assets/js/main.js">
-        // Define your custom element
-        // const hoverObj = [
-//     {
-//         img: "../assets/icons/image/racquets_240306.png",
-//         title: "RAQUEST"
-        
-//     },
-//     {
-//         img: "../assets/icons/image/racquets_240306.png",
-//         title: "RAQUEST"
-        
-//     },
-//     {
-//         img: "../assets/icons/image/racquets_240306.png",
-//         title: "RAQUEST"
-        
-//     },
-//     {
-//         img: "../assets/icons/image/racquets_240306.png",
-//         title: "RAQUEST"
-        
-//     },
-// ]
-//         class HoverComponent extends HTMLElement {
-//             connectedCallback() {
-//                 this.innerHTML = `
-//                 <div class="flex justify-between gap-3 max-w-[1600px] items-center w-[900px] flex-1">
-//                 ${hoverObj.map((card) => {
-//                     return `
-//                         <div class="flex flex-col items-center justify-center">
-//                             <img src="${card.img}" alt="">
-//                             <p class="font-semibold text-[18px]">${card.title}</p>
-//                         </div>
-//                     `
-//                 }).join("")}
-//             </div>
-//             `;
-//             }
-//         }
-    
-//         // Register your custom element
-//         customElements.define('hover-component', HoverComponent);
-    
-//         function openNav() {
-//             document.getElementById("mySidenav").classList.remove('hidden');
-//         }
-    
-//         function closeNav() {
-//             document.getElementById("mySidenav").classList.add('hidden');
-//         }
+    <div class="max-w-[1600px] mx-auto mt-5">
+        <p class="font-sans text-3xl font-bold pb-2">SHOP BY CLASSICS</p>
+        <div class="flex overflow-x-hidden space-x-5">
+            <img src="../assets/icons/image/Shoe-cover.webp" alt="" class="Silde2">
+            <img src="../assets/icons/image/Shoe-cover.webp" alt="" class="Silde2">
+            <img src="../assets/icons/image/Shoe-cover.webp" alt="" class="Silde2">
+            <img src="../assets/icons/image/Shoe-cover.webp" alt="" class="Silde2">
+            <img src="../assets/icons/image/Shoe-cover.webp" alt="" class="Silde2">
+        </div>
+        <div class="flex items-center gap-10">
+            <button
+              href="#"
+              class="prev py-3 px-5 font-black text-xl rounded-[50%] bg-neutral-400"
+              onclick="plusSlides(-1)"
+            >
+              ❮
+            </button>
+            <button
+              href="#"
+              class="next py-3 px-5 font-black text-xl rounded-[50%] bg-neutral-400"
+              onclick="plusSlides(1)"
+            >
+              ❯
+            </button>
+        </div>
+    </div>
+    <script>
+        let currentSlide = 0; 
+
+        function plusSlides(n) {
+            const carousel = document.querySelector('.flex.overflow-x-hidden');
+            const images = carousel.querySelectorAll('.Slide2');
+            const imageWidth = images[0].clientWidth; 
+
+            currentSlide = Math.max(0, Math.min(currentSlide + n, images.length - 1)); 
+            carousel.scrollTo({ left: currentSlide * imageWidth, behavior: 'smooth' });
+        }
     </script>
     
 

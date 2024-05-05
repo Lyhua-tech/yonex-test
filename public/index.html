@@ -9,7 +9,7 @@
 </head>
 <body class="font-[Oswald]">
     <!-- Start Navbar -->
-    <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute z-[9999] ">
+    <nav class=" w-full bg-neutral-800 bg-opacity-40 text-white absolute z-[9999] border-1">
         <div class="h-[60px] flex justify-between max-w-[1600px] mx-auto items-center md:h-[100px] ">
             <!-- Hamburger Icon -->
             <div class="block cursor-pointer md:hidden ml-3 " onclick="openNav()">
@@ -272,32 +272,100 @@
     </div>
     <!-- End Hero Content -->
 
-
-    <div class="max-w-[1600px] mx-auto items-center justify-center h-[400px] gap-6 hidden md:block">
-        <h2 class="font-bold text-2xl text-center hidden md:block">BROSWE BY SPORTS</h2>
-        <div class="md:flex justify-center items-center py-4 hidden">
-            <card-component></card-component>
+    <div class="max-w-[1600px] mx-auto mt-10 md:block hidden">
+        <p class="text-2xl font-normal pb-2 text-center font-[Oswald] tracking-[2px]">BROWSE BY SPORTS</p>
+        <div class=" flex items-center justify-center mt-5">
+            <div class="gap-2 w-[900px] flex items-center justify-center overflow-x-hidden">
+                <img src="https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png" alt="" class="slide2 w-[250px]">
+                <img src="https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png" alt="" class="slide2 w-[250px]">
+                <img src="https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png" alt="" class="slide2 w-[250px]">
+                <img src="https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png" alt="" class="slide2 w-[250px]">
+                <img src="https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png" alt="" class="slide2 w-[250px]">
+            </div>
+            <button href="#" class="prev py-3 px-5 font-black text-xl border-[1px] border-solid relative top-[10px] right-[930px] bg-white" onclick="plusSlide(-1)">
+                ❮
+            </button>
+            <button href="#" class="prev py-3 px-5 font-black text-xl border-[1px] border-solid relative top-[10px] right-[70px] bg-white" onclick="plusSlide(1)">
+                ❯
+            </button>
         </div>
     </div>
+    
 
     <div class="max-w-[1200px] mx-auto mt-20 md:block flex flex-col justify-center items-center">
         <h2 class="font-normal text-xl text-center mb-6">RECENT NEWS</h2>
-        <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5">
-            <div class="md:max-w-[400px] max-w-[300px]">
-                <img src="../assets/icons/image/new-eclipson.webp" alt="">
+        <div class="slideshow-container-recent">
+            <!-- new shoes -->
+            <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide ">
+                <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px] bg-black">
+                    <img class="w-full h-full object-cover" src="../assets/icons/image/new-eclipson.webp" alt="" >
+                </div>
+                <div class="text-center font-[Oswald, sans-sanref, lato] ">
+                    <p class="font-[Oswald, sans-sanref] pt-3 md:p-0">General  April 10, 2024</p>
+                    <h2 class="text-[30px] md:font-bold tracking-[2.5px] pb-4 md:pb-0">
+                        Yonex announces <br>“Environmental <br class="md:visible hidden">Vision <br> 2050”: To <br class="md:visible hidden"> carry sport ...<span class="md:visible hidden"><into <br> the future</span>
+                    </h2>
+                    <p class="font-light ">
+                        TOKYO, Japan – Yonex Co., Ltd. is proud to announce its <br>
+                        newly established “Yonex Environmental Vision 2050.” <br>
+                        With the message
+                    </p>
+                    <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20">READ MORE</button>
+                </div>
             </div>
-            <div class="text-center font-[Oswald, sans-sanref, lato] ">
-                <p class="font-[Oswald, sans-sanref] pt-3 md:p-0">General  April 10, 2024</p>
-                <h2 class="text-[30px] md:font-bold tracking-[2.5px] pb-4 md:pb-0">
-                    Yonex announces <br>“Environmental <br class="md:visible hidden">Vision <br> 2050”: To <br class="md:visible hidden"> carry sport ...<span class="md:visible hidden"><into <br> the future</span>
-                </h2>
-                <p class="font-light ">
-                    TOKYO, Japan – Yonex Co., Ltd. is proud to announce its <br>
-                    newly established “Yonex Environmental Vision 2050.” <br>
-                    With the message
-                </p>
-                <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20">READ MORE</button>
+            <!-- new s -->
+            <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+                <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]">
+                    <img class="w-full h-full object-cover" src="https://www.yonex.com/media/rotator/tmp/images/news240226_600.jpg" alt="" >
+                </div>
+                <div class="text-center font-[Oswald, sans-sanref, lato] ">
+                    <p class="font-[Oswald, sans-sanref] pt-3 md:p-0">General  April 10, 2024</p>
+                    <h2 class="text-[30px] md:font-bold tracking-[2.5px] pb-4 md:pb-0">
+                        Yonex announces <br>“Environmental <br class="md:visible hidden">Vision <br> 2050”: To <br class="md:visible hidden"> carry sport ...<span class="md:visible hidden"><into <br> the future</span>
+                    </h2>
+                    <p class="font-light ">
+                        TOKYO, Japan – Yonex Co., Ltd. is proud to announce its <br>
+                        newly established “Yonex Environmental Vision 2050.” <br>
+                        With the message
+                    </p>
+                    <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20">READ MORE</button>
+                </div>
             </div>
+            <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+                <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                    <img class="w-full h-full object-cover" src="https://www.yonex.com/media/rotator/tmp/images/news_240501_600.jpg" alt="">
+                </div>
+                <div class="text-center font-[Oswald, sans-sanref, lato] ">
+                    <p class="font-[Oswald, sans-sanref] pt-3 md:p-0">General  April 10, 2024</p>
+                    <h2 class="text-[30px] md:font-bold tracking-[2.5px] pb-4 md:pb-0">
+                        Yonex announces <br>“Environmental <br class="md:visible hidden">Vision <br> 2050”: To <br class="md:visible hidden"> carry sport ...<span class="md:visible hidden"><into <br> the future</span>
+                    </h2>
+                    <p class="font-light ">
+                        TOKYO, Japan – Yonex Co., Ltd. is proud to announce its <br>
+                        newly established “Yonex Environmental Vision 2050.” <br>
+                        With the message
+                    </p>
+                    <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20">READ MORE</button>
+                </div>
+            </div>
+            <div class="flex md:flex-row flex-col justify-center items-center md:justify-around md:gap-5 recent-fade dot-recent recent-slide">
+                <div class="md:max-w-[400px] max-w-[300px] h-[300px] md:h-[400px]"">
+                    <img class="w-full h-full object-cover" src="https://www.yonex.com/media/rotator/tmp/images/news240411_600x600.jpg" alt="">
+                </div>
+                <div class="text-center font-[Oswald, sans-sanref, lato] ">
+                    <p class="font-[Oswald, sans-sanref] pt-3 md:p-0">General  April 10, 2024</p>
+                    <h2 class="text-[30px] md:font-bold tracking-[2.5px] pb-4 md:pb-0">
+                        Yonex announces <br>“Environmental <br class="md:visible hidden">Vision <br> 2050”: To <br class="md:visible hidden"> carry sport ...<span class="md:visible hidden"><into <br> the future</span>
+                    </h2>
+                    <p class="font-light ">
+                        TOKYO, Japan – Yonex Co., Ltd. is proud to announce its <br>
+                        newly established “Yonex Environmental Vision 2050.” <br>
+                        With the message
+                    </p>
+                    <button class="bg-[#1f2427] py-3 md:px-7 mt-8 text-white font-bold px-20">READ MORE</button>
+                </div>
+            </div>
+            
         </div>
     </div> 
 

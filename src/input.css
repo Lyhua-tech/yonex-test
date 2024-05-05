@@ -6,15 +6,15 @@
 @tailwind utilities;
 
 @layer components {
-  .slideshow-container {
+  .slideshow-container .slideshow-container-recent{
     @apply max-w-1000px relative mx-auto;
   }
 
-  .text {
+  .text .recent-fade{
     @apply text-white text-base py-2 px-3 absolute bottom-8 w-full text-center;
   }
 
-  .dot {
+  .dot .dot-recent{
     @apply h-6 w-6 mx-1 bg-gray-400 rounded-full inline-block transition duration-600 ease-in-out;
   }
 
@@ -27,7 +27,7 @@
     to { opacity: 1; }
   }
 
-  .fade {
+  .fade .recent-fade{
     @apply animate-fade duration-1500;
   }
 }

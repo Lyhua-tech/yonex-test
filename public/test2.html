@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body>
     
@@ -64,6 +65,48 @@
         <div class="text">Caption Three</div>
         </div>
     
+
+        <div class="max-w-[1600px] mx-auto mt-5">
+            <p class="font-sans text-3xl font-bold pb-2">SHOP BY CLASSICS</p>
+            <div class="flex overflow-x-auto ">
+                <div class="w-[200px] flex flex-col justify-center">
+                    <img src="../assets/icons/image/Shoe-cover.webp" alt="">
+                    <p class="w-fit">Shoes</p>
+                </div>
+                <div class="w-[200px]">
+                    <img src="../assets/icons/image/Shoe-cover.webp" alt="">
+                    <p>Shoes</p>
+                </div>
+                <div class="w-[200px]">
+                    <img src="../assets/icons/image/Shoe-cover.webp" alt="">
+                    <p>Shoes</p>
+                </div>
+                <div class="w-[200px]">
+                    <img src="../assets/icons/image/Shoe-cover.webp" alt="">
+                    <p>Shoes</p>
+                </div>
+                <div class="w-[200px]">
+                    <img src="../assets/icons/image/Shoe-cover.webp" alt="">
+                    <p>Shoes</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-10">
+                <button
+                  href="#"
+                  class="prev py-3 px-5 font-black text-xl rounded-[50%] bg-neutral-400"
+                  onclick="plusSlides(-1)"
+                >
+                  ❮
+                </button>
+                <button
+                  href="#"
+                  class="next py-3 px-5 font-black text-xl rounded-[50%] bg-neutral-400"
+                  onclick="plusSlides(1)"
+                >
+                  ❯
+                </button>
+              </div>
+        </div>
     </div>
     
     <script>
@@ -82,6 +125,17 @@
         slides[slideIndex1-1].style.display = "block";  
         dots[slideIndex1-1].className += " active";
         setTimeout(showSlides1, 2000); // Change image every 2 seconds
+        }
+
+        let currentSlide = 0; 
+
+        function plusSlides(n) {
+            const carousel = document.querySelector('.Slidebox');
+            const images = carousel.querySelectorAll('.mySlides');
+            const imageWidth = images[0].clientWidth; 
+
+            currentSlide = Math.max(0, Math.min(currentSlide + n, images.length - 1)); 
+            carousel.scrollTo({ left: currentSlide * imageWidth, behavior: 'smooth' });
         }
     </script>
 </body>

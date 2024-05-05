@@ -1,24 +1,3 @@
-// Sport card object
-const arrObj = [
-    {
-        img: "https://www.yonex.com/media/catalog/category/NANOFLARE_800.png",
-        title: "BADMINTON"
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/ezone-100.png",
-        title: "TENNIS"
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/EZONE_GT_d_ts_Head.png",
-        title: "GOLF"
-    },
-    {
-        img: "https://www.yonex.com/media/catalog/category/Carbon-Cruise-Aerus.png",
-        title: "RUNNING"
-        
-    },
-    
-]
 // Badminton object
 const badmintonObj = [
     {
@@ -169,24 +148,7 @@ const snowboardObj = [
         
     },
 ]
-// Sports card component
-class CardComponent extends HTMLElement{
-    connectedCallback() {
-        this.innerHTML = `
-            <div class="flex justify-between gap-3 max-w-[1200px] items-center flex-1">
-                ${arrObj.map((card) => {
-                    return `
-                        <div class="flex flex-col items-center justify-center">
-                            <img src="${card.img}" alt="" class="bg-[#f7f8f9]" >
-                            <p class="font-semibold text-[18px] ">${card.title}</p>
-                        </div>
-                    `
-                }).join("")}
-            </div>
-            `
-    } 
-}
-customElements.define("card-component", CardComponent);
+
 
 // Baminton component
 class BadmintonComponent extends HTMLElement {
@@ -428,5 +390,33 @@ function showSlides1() {
     if (slideIndex1 > slides.length) {slideIndex1 = 1}    
     slides[slideIndex1-1].style.display = "block";  
     dots[slideIndex1-1].className += " active";
-    setTimeout(showSlides1, 2000); // Change image every 2 seconds
+    setTimeout(showSlides1, 2000);
+}
+
+let currentSlide1 = 0; 
+
+function plusSlide(n) {
+  const carousel = document.querySelector('.flex.overflow-x-hidden');
+  const images = carousel.querySelectorAll('.slide2');
+  const imageWidth = images[0].clientWidth; 
+
+  currentSlide1 = Math.max(0, Math.min(currentSlide1 + n, images.length - 1)); 
+  carousel.scrollTo({ left: currentSlide1 * imageWidth, behavior: 'smooth' });
+}
+
+let slideIndexRecent = 0;
+showSlidesRecent();
+
+function showSlidesRecent() {
+    let i;
+    let slides = document.getElementsByClassName("recent-slide");
+    let dots = document.getElementsByClassName("dot-recent");
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+    }
+    slideIndexRecent++;
+    if (slideIndexRecent > slides.length) {slideIndexRecent = 1}    
+    slides[slideIndexRecent-1].style.display = "flex";  
+    dots[slideIndexRecent-1].className += " active";
+    setTimeout(showSlidesRecent, 4000);
 }
